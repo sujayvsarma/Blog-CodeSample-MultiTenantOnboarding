@@ -1,0 +1,45 @@
+﻿/*
+    sujaycms.com
+    © 2020, Sujay V Sarma. All rights reserved.
+    Product : sujaycms.com
+    About this file: Styles for the Azure Marketplace UX
+    Must load bootstrap-customized.css BEFORE this file
+
+    Reference: Bootstrap "dark" color: #343a40
+*/
+
+.folder-list-item {
+    cursor: pointer;
+}
+
+    .folder-list-item:active {
+        font-weight: bold;
+    }
+
+
+.folder-items-detailsview-table {
+}
+
+    .folder-items-detailsview-table th {
+        color: #6c757d !important;
+        text-transform: uppercase !important;
+        font-size: 95%;
+    }
+
+
+/* set a disabled style for disabled nav-links */
+.nav-link {
+    cursor: pointer;
+}
+
+    .nav-link.disabled {
+        cursor: default;
+        color: #999999 !important;
+    }
+
+
+
+.btn:disabled {
+    color: #999999 !important;
+    cursor: default;
+}

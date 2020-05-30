@@ -1,0 +1,348 @@
+﻿/*
+    sujaycms.com
+    © 2020, Sujay V Sarma. All rights reserved.
+    Product : sujaycms.com
+    About this file: This file contains overrides to the Bootstrap theme for use with this website. 
+    This stylesheet **overrides** Twitter Bootstrap 4.0's CSS. We expect Bootstrap.min.css to be loaded BEFORE this file! 
+
+    Reference: Bootstrap "dark" color: #343a40
+*/
+
+
+/* =========================== Html Elements ================================== */
+
+html, body, form {
+    height: 100% !important;
+    width: 100% !important;
+    padding: 0px !important;
+    margin: 0px !important;
+    background-color: #ffffff;
+}
+
+h1, h2, h3, h4 {
+    font-weight: bold !important;
+}
+
+[data-toggle=collapse] {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+    [data-toggle=collapse]:hover {
+        cursor: pointer;
+        text-decoration: underline;
+    }
+
+table.table td {
+    border: none !important;
+}
+
+table.border-0 tr, table.border-0 td {
+    border: none !important;
+}
+
+table[border='1'] td {
+    border: solid 1px #343a40 !important;
+}
+
+.table-bordered td {
+    border: solid 1px #343a40 !important;
+}
+
+td ~ ul {
+    padding-left: 0 !important;
+}
+
+input[type=checkbox], input[type=radio] {
+    background-color: transparent !important;
+}
+
+    input[type=checkbox] + label, input[type=radio] + label {
+        margin-left: 5px !important;
+        font-weight: normal;
+        clear: none;
+    }
+
+    input[type=checkbox]:checked + label, input[type=radio]:checked + label {
+        margin-left: 5px !important;
+        font-weight: bold;
+        clear: none;
+    }
+
+select[multiple=multiple] option[selected=selected] {
+    font-weight: bold !important;
+}
+
+div:empty {
+    display: none;
+}
+
+footer {
+    margin-top: auto;
+    margin-bottom: 0px;
+    display: block;
+    clear: both;
+    font-size: small;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+/* =========================== Bootstrap Overrides============================== */
+
+.navbar-form, .navbar-form form {
+    background-color: transparent;
+}
+
+.navbar-brand .logo {
+    height: 48px;
+}
+
+.navbar-brand a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+ul.nav-tabs li.nav-item a.nav-link.active {
+    font-weight: bold;
+}
+
+ul.nav {
+    width: 100%;
+    background: #cccccc;
+    color: #000000;
+}
+
+    ul.nav a {
+        color: #000000;
+    }
+
+li.nav-item {
+    background-color: transparent;
+    color: #343a40;
+    vertical-align: middle !important;
+    white-space: nowrap;
+}
+
+    li.nav-item:hover {
+        border-radius: 4px 5px;
+        background-color: #999999;
+    }
+
+    li.nav-item.dropdown {
+        padding-top: 5px;
+    }
+
+
+ul.navbar-nav li {
+    margin-right: 20px !important;
+}
+
+a.nav-link {
+    background-color: transparent;
+}
+
+    a.nav-link.active {
+        color: #ffffff !important;
+    }
+
+a.text-dark {
+    text-decoration: underline !important;
+}
+
+.nav-tabs {
+    background-color: transparent;
+    color: #343a40;
+}
+
+    .nav-tabs .nav-item:first-of-type {
+        margin-left: 20px;
+    }
+
+    .nav-tabs .nav-link:active, .nav-tabs .nav-link:hover {
+        border-radius: 4px 5px !important;
+    }
+
+.nav-pills .nav-link.active, .nav-pills .nav-item:hover, .nav-pills a:hover {
+    background-color: #6c757d;
+    color: #ffffff !important;
+}
+
+.dropdown-toggle {
+    background-color: transparent;
+    border: none;
+    color: #343a40;
+    font-size: small;
+    vertical-align: middle !important;
+    padding: 8px;
+}
+
+    .dropdown-toggle:hover {
+        border-radius: 4px 5px;
+        background-color: #999999;
+        cursor: pointer;
+    }
+
+a.dropdown-toggle {
+    background-color: transparent;
+    color: #ffffff;
+    white-space: nowrap;
+}
+
+    a.dropdown-toggle:hover {
+        border-radius: 4px 5px;
+        background-color: #999999;
+    }
+
+.dropdown-menu {
+    z-index: 1000;
+    min-width: 10rem;
+    padding: .5rem 0;
+    margin: .125rem 0 0;
+    font-size: small;
+    background-color: #ffffff !important;
+    color: #343a40 !important;
+    border: solid 1px #343a40;
+}
+
+@media (min-width:768px) {
+    .dropdown-menu-right {
+        right: 0 !important;
+        left: auto !important;
+    }
+}
+
+@media (max-width:576px) {
+    .dropdown-menu-right {
+        left: 0 !important;
+        right: auto !important;
+    }
+}
+
+.dropdown-item {
+    color: #343a40 !important;
+}
+
+    .dropdown-item:hover {
+        background-color: #343a40 !important;
+        color: #ffffff !important;
+    }
+
+a.dropdown-item {
+    background-color: transparent;
+}
+
+    a.dropdown-item.active {
+        color: #ffffff !important;
+    }
+
+ul.nav-tabs {
+    background-color: #6c757d;
+    color: #ffffff;
+}
+
+    ul.nav-tabs li.nav-item, ul.nav-tabs li.nav-item a.nav-link {
+        background-color: transparent;
+        color: #ffffff !important;
+    }
+
+        ul.nav-tabs li.nav-item:hover, ul.nav-tabs li.nav-item a.nav-link:hover {
+            background-color: #ffffff !important;
+            color: #343a40 !important;
+        }
+
+        ul.nav-tabs li.nav-item a.nav-link.active {
+            background-color: #ffffff !important;
+            color: #343a40 !important;
+        }
+
+
+.row {
+    margin-bottom: 15px !important;
+}
+
+.col-sm-1 {
+    margin-top: 15px;
+}
+
+
+.btn {
+    border-radius: 4px 5px;
+    font-size: 80%;
+}
+
+
+input.form-control, input[type=date].form-control, select.form-control {
+    font-size: 1em !important;
+    /*padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border: solid 1px #343a40;
+    border-radius: 0.5rem !important;
+    margin: 5px;*/
+}
+
+.form-control.is-invalid {
+    border: solid 1px crimson;
+    /*border-radius: 0.5rem !important;*/
+}
+
+div.invalid-feedback {
+    font-size: 120% !important;
+}
+
+/*---------------- Bootstrap Datatables overrides ---------------- */
+.dataTables_wrapper {
+    font-size: 90%;
+}
+
+.navbar-primary .navbar-brand {
+    color: #fff
+}
+
+    .navbar-primary .navbar-brand:focus, .navbar-primary .navbar-brand:hover {
+        color: #fff
+    }
+
+.navbar-primary .navbar-nav .nav-link {
+    color: rgba(255,255,255,.5)
+}
+
+    .navbar-primary .navbar-nav .nav-link:focus, .navbar-primary .navbar-nav .nav-link:hover {
+        color: rgba(255,255,255,.75)
+    }
+
+    .navbar-primary .navbar-nav .nav-link.disabled {
+        color: rgba(255,255,255,.25)
+    }
+
+    .navbar-primary .navbar-nav .active > .nav-link, .navbar-primary .navbar-nav .nav-link.active, .navbar-primary .navbar-nav .nav-link.show, .navbar-primary .navbar-nav .show > .nav-link {
+        color: #fff
+    }
+
+.navbar-primary .navbar-toggler {
+    color: rgba(255,255,255,.5);
+    border-color: rgba(255,255,255,.1)
+}
+
+.navbar-primary .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 0.5)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")
+}
+
+.navbar-primary .navbar-text {
+    color: rgba(255,255,255,.5)
+}
+
+    .navbar-primary .navbar-text a {
+        color: #fff
+    }
+
+        .navbar-primary .navbar-text a:focus, .navbar-primary .navbar-text a:hover {
+            color: #fff
+        }
+
+/*---------------- Bootstrap Datepicker overrides ---------------- */
+
+.cursor-pointer {
+    cursor: pointer;
+}
