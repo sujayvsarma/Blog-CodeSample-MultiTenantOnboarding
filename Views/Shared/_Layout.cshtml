@@ -1,48 +1,77 @@
 ﻿<!DOCTYPE html>
+@{ DateTime rightNow = DateTime.UtcNow; }
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - MultiTenantSample</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="expires" content="@rightNow.AddMinutes(15).ToString("yyyy-MM-ddTHH:mm:ss.msZ")" />
+
+    <meta name="referrer" content="origin-when-crossorigin" id="meta_referrer" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="distribution" content="web" />
+    <meta name="rating" content="general" />
+    <meta name="rating" content="safe for kids" />
+    <meta name="robots" content="index,follow" />
+    <meta name="revisit-after" content="1 day" />
+    
+    <link rel="shortcut icon" type="image/x-icon" href="~/images/favicon.ico" />
+
+    <title>@ViewData["Title"] | Multi-tenant Sample</title>
+
+    <link rel="stylesheet" type="text/css" href="~/styles/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="~/styles/glyphicons.css" />
+    <link rel="stylesheet" type="text/css" href="~/styles/bootstrap-customized.css" />
+    @if (IsSectionDefined("AdditionalStyles"))
+    {@RenderSection("AdditionalStyles", required: false)}
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">MultiTenantSample</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
+        <nav class="navbar navbar-expand-lg navbar-primary bg-primary text-white border-bottom box-shadow">
+            <div class="navbar-brand">
+                <div class="align-middle">
+                    <a class="text-white font-weight-bold" asp-controller="Home" asp-action="Index">
+                        Multi-tenant Sample
+                    </a>
                 </div>
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menuMain" aria-controls="menuMain" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse" id="cloudMenuMain">
+                <ul class="navbar-nav float-right ml-auto">
+                    <li class="nav-item small">
+                        <a class="nav-link" style="color: #ffffff !important;" role="button" href="/" title="Homepage">
+                            <span class="glyphicon glyphicon-home"></span>Home
+                        </a>
+                    </li>
+                    <li class="nav-item small">
+                        <a class="nav-link" style="background-color: blue; font-weight: bold; color: #ffffff !important;" role="button" href="/onboard/start" title="Sign Up">
+                            <span class="glyphicon glyphicon-edit"></span>Sign Up
+                        </a>
+                    </li>
+                    <li class="nav-item small">
+                        <a class="nav-link" style="background-color: red; font-weight: bold; color: #ffffff !important;" role="button" href="/signin" title="Sign In">
+                            <span class="glyphicon glyphicon-log-in"></span>Sign In
+                        </a>
+                    </li>
+                </ul>
             </div>
         </nav>
     </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2020 - MultiTenantSample - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
-    </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-    @RenderSection("Scripts", required: false)
+    <main role="main" class="p-0 m-0 vh-100" style="width: 98.5vw;">
+        @RenderBody()
+
+        <footer>
+            <hr />
+            Copyright &copy; @rightNow.Year - Sujay V Sarma. All Rights Reserved.<br />
+            Terms of Service | Privacy Policy
+        </footer>
+    </main>
+
+    <script type="text/javascript" src="~/scripts/jquery.min.js"></script>
+    <script type="text/javascript" src="~/scripts/popper.min.js"></script>
+    <script type="text/javascript" src="~/scripts/bootstrap.min.js"></script>
+    @if (IsSectionDefined("Scripts"))
+    {@RenderSection("Scripts", required: false)}
 </body>
 </html>
