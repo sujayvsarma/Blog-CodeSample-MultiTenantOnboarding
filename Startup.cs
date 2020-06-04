@@ -10,6 +10,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Identity.Client;
 using Microsoft.IdentityModel.Protocols.OpenIdConnect;
 
+using MultiTenantSample.AzureAd;
+
 namespace MultiTenantSample
 {
     public class Startup
@@ -107,7 +109,8 @@ namespace MultiTenantSample
                         }
 
 
-                        options.TokenValidationParameters.ValidateIssuer = false;
+                        options.TokenValidationParameters.IssuerValidator = MultiTenantIssuerValidator.GetIssuerValidator(options.Authority).Validate;
+                        options.TokenValidationParameters.ValidateIssuer = true;
 
                         options.TokenValidationParameters.NameClaimType = "preferred_username";
                     }
