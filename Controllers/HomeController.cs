@@ -8,12 +8,19 @@ namespace MultiTenantSample.Controllers
     /// This is our home controller. This controller does nothing useful in this 
     /// sample except to show up the default homepage at app startup.
     /// </summary>
-    [AllowAnonymous, Controller]
+    [Controller]
     public class HomeController : Controller
     {
 
-        [HttpGet("/")]
+        [AllowAnonymous, HttpGet("/")]
         public IActionResult Index()
+        {
+            return View("Homepage");
+        }
+
+
+        [Authorize, HttpGet("/login")]
+        public IActionResult AuthenticatedIndex()
         {
             return View("Homepage");
         }
