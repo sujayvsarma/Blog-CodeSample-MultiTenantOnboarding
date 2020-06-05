@@ -122,6 +122,8 @@ namespace MultiTenantSample
             /// 
             ////////////////////////////////////////////////////////////////////////////////////////
 
+            services.AddSingleton<IAzureAdTokenProvider, AzureAdTokenProvider>();
+
             services.AddControllersWithViews(
                     options =>
                     {
