@@ -2,6 +2,7 @@
 using Microsoft.Identity.Client;
 
 using MultiTenantSample.Data;
+using MultiTenantSample.MvcServices;
 
 using System;
 using System.Threading.Tasks;

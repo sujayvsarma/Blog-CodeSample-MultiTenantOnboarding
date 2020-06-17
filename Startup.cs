@@ -11,6 +11,7 @@ using Microsoft.Identity.Client;
 using Microsoft.IdentityModel.Protocols.OpenIdConnect;
 
 using MultiTenantSample.AzureAd;
+using MultiTenantSample.MvcServices;
 
 namespace MultiTenantSample
 {
@@ -123,6 +124,7 @@ namespace MultiTenantSample
             ////////////////////////////////////////////////////////////////////////////////////////
 
             services.AddSingleton<IAzureAdTokenProvider, AzureAdTokenProvider>();
+            services.AddSingleton<IAzureTableStorageService, AzureTablesService>();
 
             services.AddControllersWithViews(
                     options =>
